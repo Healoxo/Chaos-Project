@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Feb 11 18:10:35 2022
+
+@author: toliveira
+"""
+import matplotlib.pyplot as plt
+from mpl_toolkits import mplot3d
+import pickle
+
+f=open("/adhome/t/to/toliveira/M1/Projet/data.txt","rb")
+index=pickle.load(f)
+x2=pickle.load(f)
+y2=pickle.load(f)
+z2=pickle.load(f)
+
+
+axx=plt.axes(projection='3d')
+#plt.plot(x2,y2,z2)
+axx.plot3D(x2,y2,z2)
+plt.show()
